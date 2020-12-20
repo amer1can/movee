@@ -1,0 +1,149 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0px 100px 0px;
+    @media (max-width: $md2+px) {
+        flex-wrap: wrap;
+        padding: 60px 0px 50px 0px;
+    }
+    @media (max-width: $md2+px) {
+        justify-content: center;
+    }
+    a {
+        color: #333;
+    }
+    &__1 {
+        padding: 0px 60px 0px 0px;
+        flex: 0 0 25%;
+        @media (max-width: $md2+px) {
+            flex: 0 0 50%;
+        }
+        @media (max-width: $md3+px) {
+            padding: 0px 0px 46px 0px;
+            text-align: center;
+        }
+    }
+    &__1-logo {
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 55px;
+        transition: all 0.2s ease-out;
+       @media (max-width: $md2+px) {
+            margin-bottom: 30px;
+        } 
+    }
+    &__1-text {
+        transition: all 0.2s ease-out;
+    }
+    &__1-text + &__1-text {
+        line-height: 1.1;
+        margin-top: 44px;
+        @media (max-width: $md2+px) {
+            margin-top: 20px;
+        }
+    }
+    &__2 {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 25%;
+        font-size: 20px;
+        font-weight: 500;
+        @media (max-width: $md2+px) {
+            flex: 0 0 50%;
+            justify-content: flex-start;
+        }
+        @media (max-width: $md3+px) {
+            justify-content: center;
+            text-align: center;
+            margin: 0px 0px 46px 0px;
+        }
+    }
+    &__2 li {
+        transition: all 0.2s ease-out;
+        margin-bottom: 20px;
+    }
+    &__2-menu {
+        
+    }
+    &__3 {
+        padding: 5px 61px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex: 0 0 25%;
+        @media (max-width: $md2+px) {
+            flex: 0 0 50%;
+            align-items: flex-start;
+        }
+        @media (max-width: $md3+px) {
+            padding: 5px 0px 0px 0px;
+            flex: 0 0 auto;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    &__3-icons a{
+        margin-right: 30px;
+    }
+    &__3-icons a:last-child {
+        margin-right: 0px;
+    }
+    &__3-email {
+        padding-right: 30px;
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: underline;
+        @media (max-width: $md3+px) {
+            margin: 20px 0px 47px 0px;
+            padding-right: 0px;
+        }
+    }
+    &__4 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex: 0 0 25%;
+       
+        @media (max-width: $md2+px) {
+            flex: 0 0 50%;
+            align-items: flex-start;
+        }
+    }
+    &__4-btn {
+        margin: 4px -5px 0px 0px;
+        padding: 11px 29px;
+        font-weight: 500;
+        font-size: 20px;
+        background-color: #FED100;
+        border: 1px solid #333;
+        transition: all 0.2s ease;
+        @media (max-width: $md1+px) {
+            font-size: 18px;
+        }
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__4-btn:hover {
+        cursor: pointer;
+        background-color: #0e0d0d4b;
+    }
+    &__4-phone {
+        margin: 8px 33px 0px 0px;
+        font-size: 20px;
+        font-weight: 500;
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__5-btn {
+        display: none;
+        @media (max-width: $md3+px) {
+            display: block;
+        }
+    }
+    &__1-logo a:hover, &__1-text a:hover, &__2-menu li:hover, &__3-email a:hover  {
+        color: rgb(180, 177, 177);
+    }
+}

@@ -1,0 +1,284 @@
+//-179,-5
+/* -------------- icon menu ------------- */
+.icon {
+	position: absolute;
+	display: none;
+	width: 44px;
+	height: 19px;
+	top: 42px;
+	right: 30px;
+	background-color: #FED100;
+	border: none;
+	cursor: pointer;
+    z-index: 10;
+    @media (max-width: $md3+px) {
+        display: block;
+    }
+}
+.icon span {
+	transition: all 0.3s ease 0s;
+	top: 9px;
+	left: 0px;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+}
+.icon span:first-child {
+	top: 0px;
+}
+.icon span:last-child {
+	top: auto;
+	bottom: 0px;
+}
+.icon:focus {
+	outline: none;
+}
+.icon.active span {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	background-color: #828282;
+}
+.icon.active span:first-child {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: 9px;
+}
+.icon.active span:last-child {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	bottom: 9px;
+
+}
+
+
+/* -------------- icon menu end ------------- */
+
+.menu {
+    display: flex;
+    position: relative;
+    z-index: 5;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    a {
+        color: #333;
+        transition: all 0.2s ease-out;
+    }
+    a:hover {
+        color: rgb(180, 177, 177);
+    }
+
+    &__logo {
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__list {
+        width: 452px;
+        margin-left: 90px;
+        @media (max-width: $md2+px) {
+            margin-left: 0px;
+        }
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: $md2+px) {
+                justify-content: center;
+            }
+            li {
+                a {
+                    font-size: 18px;
+                    font-weight: 500;
+                    @media (max-width: $md2+px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            li + li {
+                @media (max-width: $md2+px) {
+                    margin-left: 25px;
+                }
+            }
+            
+        }
+  
+    }
+    &__phone {
+        font-size: 24px;
+        font-weight: 600;
+        text-decoration: underline;
+        color: #333;
+        transition: all 0.2s ease-out;
+        margin-right: -7px;
+        @media (max-width: $md2+px) {
+            font-size: 20px;
+        }
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__phone:hover {
+        color: rgb(105, 103, 103);
+    }
+
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 304px;
+    height: 60px;
+    z-index: -1;
+    top: 10px;
+    left: 10px;
+    border: 2px solid #f2f2f2;
+    transition: all 0.2s ease;
+    @media (max-width: $md3+px) {
+        display: none;
+    }
+}
+.btn {
+   position: relative;
+   z-index: 1;
+   background-color: #FF352B;
+}
+.btn:hover {
+    background-color: #ff4f46;
+}
+
+.header {
+    &__body {
+        display: flex;
+        @media (max-width: $md3+px) {
+            justify-content: center;
+        }
+    }
+    &__title {
+        margin-top: 76px;
+        flex-basis: 42%;
+        @media (max-width: $md3+px) {
+            margin-top: 17px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+            text-align: center;
+        }
+        h1 {
+            font-size: 70px;
+            font-weight: 700;
+            @media (max-width: $md2+px) {
+                font-size: 60px;
+                line-height: 1.3;
+            }
+            @media (max-width: $md3+px) {
+                font-size: 28px;
+            }
+        }
+        h3 {
+            margin: 20px 0px 67px 0px;
+            font-size: 30px;
+            font-weight: 600;
+            @media (max-width: $md2+px) {
+                font-size: 25px;
+            }
+            @media (max-width: $md3+px) {
+                font-size: 18px;
+                margin: 20px 0px 0px 0px;
+            }
+        }
+    }
+    &__items {
+        margin: 91px 0px 74px 0px;
+        display: flex;
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 7px;
+        }
+    }
+    &__item + &__item {
+        @media (max-width: $md1+px) {
+            margin-left: 15px;
+        }
+    }
+    &__text {
+        line-height: 1.5;
+    }
+    &__btn {
+        padding: 15px 95px;
+        color: #f2f2f2;
+        font-weight: 600;
+        font-size: 24px;
+        @media (max-width: $md3+px) {
+            margin: -31px 0px 40px 0px;
+        }
+    }
+    &__images {
+        position: relative;
+        flex-basis: 58%;
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__man {
+        position: absolute;
+        z-index: 3;
+        top: -31px;
+        left: 67px;
+        @media (max-width: $md2+px) {
+            left: 15px;
+        }
+        @media (max-width: $md3+px) {
+            position: relative;
+        }
+    }
+    &__man-mobile {
+        img {
+            width: 248px;
+            height: 386px;
+            text-align: center;
+        }
+    }
+    &__car {
+        position: absolute;
+        z-index: 2;
+        top: 101px;
+        right: -115px;
+        @media (max-width: $md1+px) {
+            right: 30px;
+        }
+        @media (max-width: $md2+px) {
+            right: -125px;
+        }
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__phone {
+        position: absolute;
+        bottom: 40px;
+        right: 11px;
+        z-index: 10;
+        transition: all 0.3s ease-out;
+        @media (max-width: $md1+px) {
+            right: -15px;
+        }
+        @media (max-width: $md2+px) {
+            right: -10px;
+        }
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__phone:hover {
+        transform: scale(1.1);
+    }
+}

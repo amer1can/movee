@@ -1,0 +1,137 @@
+.wrapper
+    .container
+        .how
+            .how__title.title Как это происходит?
+            .how__items
+                .how__item
+                    .how__num 
+                        img(src="../img/content/num01.svg", alt="")
+                    .how__body
+                        .how__subtitle Оценка объема предстоящих работ
+                        .how__text Стоимость переезда зависит от количества комнат, вещей и мебели. 
+                .how__item
+                    .how__num 
+                        img(src="../img/content/num02.svg", alt="")
+                    .how__body
+                        .how__subtitle Упаковка вещей
+                        .how__text Упаковываем вещи в коробки, подписываем. Габаритное и деликатное,  упаковываем отдельно. 
+                .how__item
+                    .how__num 
+                        img(src="../img/content/num03.svg", alt="")
+                    .how__body
+                        .how__subtitle Погрузка и транспортировка вещей
+                        .how__text В нашем автопарке имеются машины, подходящие для мебели любых габаритов. 
+                .how__item
+                    .how__num 
+                        img(src="../img/content/num04.svg", alt="")
+                    .how__body
+                        .how__subtitle Распаковка и расстановка мебели
+                        .how__text Опытные грузчики быстро расставят мебель и уберут мусор от распаковки. 
+        .price
+            .price__title.title Цены
+            .price__subtitle.subtitle Фиксированная стоимость на переезд под ключ
+            .price__items
+                .price__item
+                    .price__item-title 1-комнатная кв-ра
+                    .price__item-text
+                        p 1 фургон
+                        p 2 грузчика
+                        p Переезд за 4 часа
+                    .price__item-price 8 490₽
+                    a(href="#").price__item-btn.btn-order Заказать
+                .price__item
+                    .price__item-title 2-комнатная кв-ра  
+                    .price__item-text
+                        p 1 газель - 3 метра 
+                        p 2 грузчика
+                        p Переезд за 4 часа
+                    .price__item-price 10 990₽
+                    a(href="#").price__item-btn.btn-order Заказать
+                .price__item
+                    .price__item-title 3-комнатная кв-ра  
+                    .price__item-text
+                        p 1 газель - 4 метра 
+                        p 2 грузчика
+                        p Переезд за 6 часов
+                    .price__item-price 16 490₽
+                    a(href="#").price__item-btn.btn-order Заказать
+            button.price__all-prices Все цены 
+                    
+        block slider   
+            include slider
+
+.wrapper.yellow
+    .container
+        .review
+            .review__title.title Отзывы
+            .review__items
+                .review__item
+                    .review__item-subtitle.subtitle Ирина
+                    .review__item-info
+                        .review__item-date 24.03.2019
+                        .review__item-stars
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                    .review__item-text Обращение к вам за помощью в переезде оставило только положительные впечатления. Хотелось отметить замечательного водителя газели Алексея. Были трудности с заездом во двор, он проявил себя как  компетентный и профессиональный сотрудник, за что ему огромное...  
+                    a(href="#").review__item-more Читать полностью
+                .review__item
+                    .review__item-subtitle.subtitle Светлана Васильевна 
+                    .review__item-info
+                        .review__item-date 13.09.2019
+                        .review__item-stars
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                    .review__item-text Сегодня ( 13.09.2019 ) мы переехали. Остались очень довольны, несмотря на то, что к нам опоздали на 1,5 часа. Морально были к этому готовы ( в прошлый переезд в другой фирме тоже опоздали на час).  Водитель заранее позвонил, предупредил, что задерживается. Когда.... 
+                    a(href="#").review__item-more Читать полностью
+                .review__item
+                    .review__item-subtitle.subtitle Ольга Петрова
+                    .review__item-info
+                        .review__item-date 11.11.2019
+                        .review__item-stars
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                            img(src="../img/content/star.svg", alt="")
+                    .review__item-text Могу на 100% порекомендовать компанию MOVEE и отметить, что цены фиксированы, что упрощает расчет. Безо всяких заморочек, в отличии от их конкурентов. Упаковали все качественно и быстро. Все вещи приехали в сохранности. Особлая благодарность Александру за его...     
+                    a(href="#").review__item-more Читать полностью
+            .review__all 
+                a(href="#").review__all-btn.btn-yel Все отзывы
+.wrapper    
+    .container
+        .order
+            .order__title.title Закажи  переезд прямо сейчас
+            .order__subtitle Мы перезвоним в течении 10 секунд
+            form(action="", method="get").order__form
+                .order__fields
+                    input(type="text", name="name" placeholder="Ваше имя").order__input
+                    input(type="text", name="phone" placeholder="Телефон").order__input
+                .order__recall
+                    a(href="#").order__call Перезвонить мне
+                    input(type="checkbox", name="check" class="order__checkbox" id="custom" checked)
+                    label(for="custom").order__label Даю согласие на обработку данных
+.wrapper
+    .map
+        .map__img
+            //- img(src="../img/content/map.jpg", alt="")
+        .map__adress
+            .map__adress-title Movee
+            .map__adress-text Москва, Волгоградский пр-т, 38
+            .map__adress-text 8 (800)-080-12-13
+            a(href="mailto:hello@movee.ru").map__adress-text.map__adress-email hello@movee.ru
+            .map__adress-icons
+                a(href="#") 
+                    img(src="../img/content/icon_small_01.svg", alt="")
+                a(href="#")
+                    img(src="../img/content/icon_small_02.svg", alt="")
+                a(href="#")
+                    img(src="../img/content/icon_small_03.svg", alt="")
+                a(href="#")
+                    img(src="../img/content/icon_small_04.svg", alt="")
+

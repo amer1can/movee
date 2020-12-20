@@ -1,0 +1,76 @@
+.wrapper
+    .container
+        .avto
+            .avto__subtitle.subtitle 10 видов автомобилей от 800 кг до 10 тонн
+            .avto__types    
+                input(type="radio", name="type" id="type1" checked hidden).avto__types-radio
+                label(for="type1").avto__types-label Газели
+                input(type="radio", name="type" id="type2" hidden).avto__types-radio
+                label(for="type2").avto__types-label Каблуки
+                input(type="radio", name="type" id="type3" hidden).avto__types-radio
+                label(for="type3").avto__types-label Грузовики
+            
+            .avto__slider.swiper-container
+                .avto__slider-body.swiper-wrapper
+    
+                    .avto__slider-img.swiper-slide
+                        .avto__slider-text
+                            .avto__slider-subtitle.subtitle Газель 3 метра 
+                            ul
+                                li.avto__slider-li Ширина 2 м
+                                li.avto__slider-li Высота 2 м
+                                li.avto__slider-li Объем 16 м³
+                                li.avto__slider-li Грузоподъемность 1,5 т
+                            a(href="#").avto__slider-btn.btn-order Заказать
+                        img(src="../img/content/car1.png", alt="")
+
+                    .avto__slider-img.swiper-slide
+                        .avto__slider-text
+                            .avto__slider-subtitle.subtitle Газель 4 метра 
+                            ul
+                                li.avto__slider-li Ширина 3 м
+                                li.avto__slider-li Высота 3 м
+                                li.avto__slider-li Объем 18 м³
+                                li.avto__slider-li Грузоподъемность 2,5 т
+                            a(href="#").avto__slider-btn.btn-order Заказать
+                        img(src="../img/content/car2.png", alt="")
+
+                    .avto__slider-img.swiper-slide
+                        .avto__slider-text
+                            .avto__slider-subtitle.subtitle Газель 5 метра 
+                            ul
+                                li.avto__slider-li Ширина 4 м
+                                li.avto__slider-li Высота 4 м
+                                li.avto__slider-li Объем 20 м³
+                                li.avto__slider-li Грузоподъемность 5 т
+                            a(href="#").avto__slider-btn.btn-order Заказать
+                        img(src="../img/content/car3.png", alt="")
+                .avto__slider-arrow.swiper-button-prev
+                .avto__slider-arrow.swiper-button-next
+        .avto-mobile
+            .avto-mobile__title Автопарк
+            .avto-mobile__types    
+                input(type="radio", name="type" id="type11" checked hidden).avto-mobile__types-radio
+                label(for="type11").avto-mobile__types-label Газели
+                input(type="radio", name="type" id="type22" hidden).avto-mobile__types-radio
+                label(for="type22").avto-mobile__types-label Каблуки
+                input(type="radio", name="type" id="type33" hidden).avto-mobile__types-radio
+                label(for="type33").avto-mobile__types-label Грузовики
+
+            .avto-mobile__slider.swiper-container
+                .avto-mobile__slider-body.swiper-wrapper
+
+                    .avto-mobile__slider-img.swiper-slide
+                        img(src="../img/content/car1.png", alt="")
+                        .avto-mobile__slider-subtitle Газель 3 метра / 1.5 тонны
+
+                    .avto-mobile__slider-img.swiper-slide
+                        img(src="../img/content/car2.png", alt="")
+                        .avto-mobile__slider-subtitle Газель 4 метра / 2.5 тонны
+
+                    .avto-mobile__slider-img.swiper-slide
+                        img(src="../img/content/car3.png", alt="")
+                        .avto-mobile__slider-subtitle Газель 5 метра / 5 тонн
+                .avto-mobile__slider-bullets.swiper-pagination
+
+            a(href="#").avto-mobile__slider-btn.btn-order Заказать
