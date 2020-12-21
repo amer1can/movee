@@ -14,14 +14,14 @@ const pug = require('gulp-pug');
 const pugLinter = require('gulp-pug-linter');
 
 function pugLinterControl() {               // проверяет на ошибки pug файлы
-    return src('#src/pages/**/*pug')
+    return src('#src/*pug')
         .pipe(pugLinter({
             failAfterError: true
         }))
 }
 
 function pug2html() {                       // конвертит index.pug в index.html
-    return src('#src/pages/index.pug')
+    return src('#src/index.pug')
         .pipe(pug({
             pretty: true                    // не в одну строку, а как привычно
         }))
@@ -85,10 +85,10 @@ function watching() {
     watch(['#src/scss/**/*.scss'], styles) //следит за всеми папками и файлами в /scss и запускает styles
     watch(['#src/js/*.js','!#src/js/main.min.js'], scripts) //следит за всем, кроме (!) main.min.js и запускает ф-ю scripts, если что изменилось
     watch(['#src/*.html']).on('change', browserSync.reload) //перезагрузит страничку если измениться любой html
-    watch(['#src/pages/**/*.pug'], pug2html)
+    watch(['#src/*.pug'], pug2html)
 }
 
-// ручной ввод, когда нужно сохранить уже общий результат работы
+// ручной ввод 'gulp build', когда нужно сохранить уже общий результат работы
 function build() {
     return src([
         '#src/css/style.min.css',
