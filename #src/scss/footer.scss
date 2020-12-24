@@ -52,7 +52,7 @@
         font-weight: 500;
         @media (max-width: $md2+px) {
             flex: 0 0 50%;
-            justify-content: flex-start;
+            justify-content: center;
         }
         @media (max-width: $md3+px) {
             justify-content: center;
@@ -114,7 +114,9 @@
        
         @media (max-width: $md2+px) {
             flex: 0 0 50%;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
+            
         }
     }
     &__4-btn {
@@ -145,6 +147,9 @@
         font-size: 20px;
         font-weight: 500;
         text-decoration: underline;
+        @media (max-width: $md2+px) {
+           margin: 0 auto;
+        }
         @media (max-width: $md3+px) {
             display: none;
         }

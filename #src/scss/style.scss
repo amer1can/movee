@@ -1,3 +1,4 @@
+//доделать нажатие на весь Item на Ценах
 //<Подключаем шрифты>=============================================
 /* <ПРИМЕР>
 @font-face {
@@ -58,21 +59,22 @@ body {
 	width: 100%; /*что бы верстка не складывалась по ширине*/
 }
 .container {
-	max-width: $mw + px;
+	max-width: $mw + 20px;
+	// width: 100%;
 	margin: 0 auto;
-	width: 100%;
+	padding: 0 20px;
 	@media (max-width: $md1+px) {
-		max-width: 970px;
+		max-width: 990px;
 		padding: 0 15px;
 		
 	}
 	@media (max-width: $md2+px) {
-		max-width: 768px;
+		max-width: 788px;
 		padding: 0 15px;
 
 	}
 	@media (max-width: $md3+px) {
-		max-width: 576px;
+		max-width: 586px;
 		padding: 0 30px;
 		
 	}

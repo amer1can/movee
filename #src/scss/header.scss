@@ -16,7 +16,7 @@
     }
 }
 .icon.active {
-    background-color: #f5d752; //цвет фона нажатой иконки
+    background-color: #FED100; //цвет фона нажатой иконки
 }
 .icon span {
 	transition: all 0.3s ease 0s;
@@ -55,19 +55,19 @@
 
 /* -------------- icon menu end ------------- */
 .menu.show {
-    position: fixed;    
-    width: 100%;    //на весь экран
-    height: 100%;   //на весь экран
-    padding-left: 10px;
-    top: 0px;
-    left: 0px;
-    z-index: 10;
-    overflow-y: auto;
-    background-color: #f5d752;  //цвет фона
-    .menu__list ul {
-        transition: all 0.4s ease-in; //скорость появления меню
-        transform: translateX(0);   //показываем меню
-    }
+    // position: fixed;    
+    // width: 100%;    //на весь экран
+    // height: 100%;   //на весь экран
+    // padding-left: 10px;
+    // top: 0px;
+    // left: 0px;
+    // z-index: 10;
+    // overflow-y: auto;
+    // background-color: #f5d752;  //цвет фона
+    // .menu__list ul {
+    //     transition: all 0.4s ease-in; //скорость появления меню
+    //     transform: translateX(0);   //показываем меню
+    // }
 }
 .menu {
     display: flex;
@@ -92,10 +92,8 @@
         font-size: 30px;
         font-weight: 600;
         text-transform: uppercase;
-        @media (max-width: $md3+px) {
-            
-        }
     }
+
     &__list {
         width: 452px;
         margin-left: 90px;
@@ -103,48 +101,59 @@
             margin-left: 0px;
         }
 
-        ul {
-            display: flex;
-            justify-content: space-between;
-            @media (max-width: $md2+px) {
-                justify-content: center;
-            }
-            @media (max-width: $md3+px) {
-                display: block; //отменяем ранне значение flex
-                position: absolute; //чтобы не занимал пустое место на странице
-                transform: translateX(-500%); //убираем меню в сторону, чтобы потом показать с эффектом
-                // transition: all 0.1s ease-out; //скорость сворачивания меню
-                left: 30%; //отступы слева, сверху
-                top: 100px;
-            }   
-
-            li {
-                a {
-                    font-size: 18px;
-                    font-weight: 500;
-                    @media (max-width: $md2+px) {
-                        font-size: 16px;
-                    }
-                    @media (max-width: $md3+px) {
-                        font-size: 24px;
-                        font-weight: 500;
-                    }
-                }
-            }
-
-            li + li {
+    }
+    &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media (max-width: $md2+px) {
+            justify-content: center;
+        }  
+        @media (max-width: $md3+px) {
+            display: block; //отменяем ранне значение flex
+            position: absolute; //чтобы не занимал пустое место на странице
+            transform: translateX(-500%); //убираем меню в сторону, чтобы потом показать с эффектом
+            transition: all 0.5s ease-out; //скорость сворачивания меню
+        } 
+        li {
+            a {
+                font-size: 18px;
+                font-weight: 500;
                 @media (max-width: $md2+px) {
-                    margin-left: 25px;
+                    font-size: 16px;
                 }
                 @media (max-width: $md3+px) {
-                    margin-left: 0px;
-                    margin-top: 40px;
+                    font-size: 24px;
+                    font-weight: 500;
                 }
             }
-            
         }
-  
+        li + li {
+            @media (max-width: $md2+px) {
+                margin-left: 25px;
+            }
+            @media (max-width: $md3+px) {
+                margin-left: 0px;
+                margin-top: 40px;
+            }
+        }
     }
+    &__block.show {
+        position: fixed;    
+        width: 100%;    //на весь экран
+        height: 100%;   //на весь экран
+        padding: 50px;
+        text-align: center;
+        top: 70px;
+        left: 0px;
+        z-index: 10;
+        overflow-y: auto;
+        background-color: #FED100;  //цвет фона
+        transition: all 0.4s ease; //скорость появления меню
+        transform: translateX(0);   //показываем меню
+    }
+
+    
     &__phone {
         font-size: 24px;
         font-weight: 600;
@@ -152,6 +161,9 @@
         color: #333;
         transition: all 0.2s ease-out;
         margin-right: -7px;
+        @media (max-width: $md1+px) {
+            margin-right: 0px;
+        }
         @media (max-width: $md2+px) {
             font-size: 20px;
         }
@@ -162,7 +174,6 @@
     &__phone:hover {
         color: rgb(105, 103, 103);
     }
-
 }
 .btn::before {
     content: '';
@@ -320,3 +331,4 @@
         transform: scale(1.1);
     }
 }
+

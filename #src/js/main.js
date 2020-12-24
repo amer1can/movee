@@ -19,7 +19,7 @@ new Swiper('.avto-mobile__slider', {
 //icon
 const body = document.querySelector('body');
 const icon = document.querySelector('.icon');
-const menu = document.querySelector('.menu');
+const menu = document.querySelector('.menu__block');
 icon.addEventListener('click', () => {
   icon.classList.toggle('active')
   menu.classList.toggle('show')
@@ -89,6 +89,8 @@ function mediaChange(e) {
       avto.classList.remove('hide');
       avtoMobile.classList.remove('show');
 
+      //проверка, если открыто меню и меняется разрешение, то убираем меню
+      if (menu.classList.contains('show')) menu.classList.remove('show');
     }
 }
 mediaQuery.addListener(mediaChange)
