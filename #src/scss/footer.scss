@@ -5,9 +5,10 @@
     @media (max-width: $md2+px) {
         flex-wrap: wrap;
         padding: 60px 0px 50px 0px;
-    }
-    @media (max-width: $md2+px) {
         justify-content: center;
+    }
+    @media (max-width: $md3+px) {
+        flex-direction: column;
     }
     a {
         color: #333;
@@ -67,10 +68,10 @@
         
     }
     &__3 {
-        padding: 5px 61px 0px 0px;
+        margin:  6px 0px 0px 0px;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         flex: 0 0 25%;
         @media (max-width: $md2+px) {
             flex: 0 0 50%;
@@ -83,14 +84,20 @@
             text-align: center;
         }
     }
-    &__3-icons a{
-        margin-right: 30px;
+    &__3-icons {
+        @media (max-width: $md2+px) {
+            margin-left: 5px;
+        }
+       
+    }
+    &__3-icons a {   
+        margin-right: 28px;
     }
     &__3-icons a:last-child {
         margin-right: 0px;
     }
     &__3-email {
-        padding-right: 30px;
+        margin:  23px 0px 0px 0px;
         font-size: 20px;
         font-weight: 500;
         text-decoration: underline;
@@ -115,11 +122,15 @@
         padding: 11px 29px;
         font-weight: 500;
         font-size: 20px;
+        text-align: center;
         background-color: #FED100;
         border: 1px solid #333;
         transition: all 0.2s ease;
         @media (max-width: $md1+px) {
             font-size: 18px;
+        }
+        @media (max-width: $md2+px) {
+            margin-bottom: 15px;
         }
         @media (max-width: $md3+px) {
             display: none;
@@ -133,6 +144,7 @@
         margin: 8px 33px 0px 0px;
         font-size: 20px;
         font-weight: 500;
+        text-decoration: underline;
         @media (max-width: $md3+px) {
             display: none;
         }
@@ -140,6 +152,7 @@
     &__5-btn {
         display: none;
         @media (max-width: $md3+px) {
+            margin: 0px auto;
             display: block;
         }
     }

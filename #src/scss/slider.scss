@@ -6,8 +6,11 @@
     margin-bottom: 46px;
 
     &__subtitle {
-		margin: 50px 0px 60px 18px;
-		text-align: center;
+		margin: 56px 0px 60px 18px;
+        text-align: center;
+        @media (max-width: $md1+px) {
+            margin: 30px 0px 30px 18px;
+        }
 	}
 	&__types {
 		display: flex;
@@ -36,7 +39,9 @@
 		background-color: #facd034b;
     }
     
-    &__slider {}
+    &__slider {
+        margin: 19px 0px 0px 0px;
+    }
     &__slider-body {}
     &__slider-arrow:after {
         font-weight: bold;
@@ -44,24 +49,37 @@
         color: #333;
     }
     &__slider-text {
+        margin: -30px 0px 0px 0px;
         a {
             color: #333;
         }
         @media (max-width: $md1+px) {
             padding-left: 30px;
         }
-        @media (max-width: $md2+px) {
-            display: none;
-        }
     }
     &__slider-subtitle {
         margin-bottom: 30px;
+        @media (max-width: $md2+px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__slider-subtitle.subtitle {
+        @media (max-width: $md2+px) {
+           font-size: 22px;
+        }
+    }
+    &__slider-li {
+        @media (max-width: $md2+px) {
+            font-size: 14px;
+        }
     }
     &__slider-li + &__slider-li {	
-        margin-top: 20px;
+        margin-top: 34px;
+        @media (max-width: $md2+px) {
+            margin-top: 20px;
+        }
     }
     &__slider-li:last-child {
-        margin-bottom: 80px;
     }
     &__slider-li:before {
         display: inline;
@@ -69,11 +87,23 @@
         margin-right: 15px;
     }
     &__slider-btn {
+        display: block;
+        margin-top: 30px;
+    }
+    &__slider-btn.btn-order {
+        @media (max-width: $md2+px) {
+            padding: 16px 55px;
+        }
     }
     &__slider-img {
+        margin: 28px 0px 0px 0px;
+        padding: 0 85px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        img {
+            width: 70%;
+        }
     }
     }
     .avto-mobile.show {
@@ -86,7 +116,7 @@
             display: block;
         }
         &__title {
-            margin: 0px 0px 20px 0px;
+            margin: 40px 0px 40px 0px;
             font-weight: 600;
             font-size: 20px;
         }

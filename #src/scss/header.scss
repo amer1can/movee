@@ -1,4 +1,4 @@
-//-179,-5
+// разЪезжается меню и логотип
 /* -------------- icon menu ------------- */
 .icon {
 	position: absolute;
@@ -6,14 +6,17 @@
 	width: 44px;
 	height: 19px;
 	top: 42px;
-	right: 30px;
-	background-color: #FED100;
+	right: 10px;
+	background-color: #FED100; //цвет фона бургера
 	border: none;
 	cursor: pointer;
     z-index: 10;
     @media (max-width: $md3+px) {
         display: block;
     }
+}
+.icon.active {
+    background-color: #f5d752; //цвет фона нажатой иконки
 }
 .icon span {
 	transition: all 0.3s ease 0s;
@@ -22,7 +25,7 @@
 	position: absolute;
 	width: 100%;
 	height: 2px;
-	background-color: #000;
+	background-color: #000; //цвет бургера
 }
 .icon span:first-child {
 	top: 0px;
@@ -37,7 +40,7 @@
 .icon.active span {
 	-webkit-transform: scale(0);
 	transform: scale(0);
-	background-color: #828282;
+	background-color: #000; //цвет нажатой кнопки
 }
 .icon.active span:first-child {
 	-webkit-transform: rotate(-45deg);
@@ -48,12 +51,24 @@
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 	bottom: 9px;
-
 }
 
-
 /* -------------- icon menu end ------------- */
-
+.menu.show {
+    position: fixed;    
+    width: 100%;    //на весь экран
+    height: 100%;   //на весь экран
+    padding-left: 10px;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    overflow-y: auto;
+    background-color: #f5d752;  //цвет фона
+    .menu__list ul {
+        transition: all 0.4s ease-in; //скорость появления меню
+        transform: translateX(0);   //показываем меню
+    }
+}
 .menu {
     display: flex;
     position: relative;
@@ -61,6 +76,10 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
+    @media (max-width: $md3+px) {
+        display: block;
+    }
+
     a {
         color: #333;
         transition: all 0.2s ease-out;
@@ -73,6 +92,9 @@
         font-size: 30px;
         font-weight: 600;
         text-transform: uppercase;
+        @media (max-width: $md3+px) {
+            
+        }
     }
     &__list {
         width: 452px;
@@ -80,15 +102,22 @@
         @media (max-width: $md2+px) {
             margin-left: 0px;
         }
-        @media (max-width: $md3+px) {
-            display: none;
-        }
+
         ul {
             display: flex;
             justify-content: space-between;
             @media (max-width: $md2+px) {
                 justify-content: center;
             }
+            @media (max-width: $md3+px) {
+                display: block; //отменяем ранне значение flex
+                position: absolute; //чтобы не занимал пустое место на странице
+                transform: translateX(-500%); //убираем меню в сторону, чтобы потом показать с эффектом
+                // transition: all 0.1s ease-out; //скорость сворачивания меню
+                left: 30%; //отступы слева, сверху
+                top: 100px;
+            }   
+
             li {
                 a {
                     font-size: 18px;
@@ -96,11 +125,20 @@
                     @media (max-width: $md2+px) {
                         font-size: 16px;
                     }
+                    @media (max-width: $md3+px) {
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
                 }
             }
+
             li + li {
                 @media (max-width: $md2+px) {
                     margin-left: 25px;
+                }
+                @media (max-width: $md3+px) {
+                    margin-left: 0px;
+                    margin-top: 40px;
                 }
             }
             

@@ -26,8 +26,8 @@ $mw: 1300;
 $md1: $mw + 20;
 $md2: 1045; //992;
 $md3: 768;
-$md5: 576;
-$md4: 480;
+$md4: 576;
+$md5: 480;
 //</ПЕРЕМЕННЫЕ>===================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>====================================
@@ -53,6 +53,10 @@ body {
 //</ОБОЛОЧКА>=====================================================
 
 //<ОСНОВНАЯ СЕТКА>================================================
+.fixed {
+	position: fixed; /*позицианируем чтобы исчез скролл*/
+	width: 100%; /*что бы верстка не складывалась по ширине*/
+}
 .container {
 	max-width: $mw + px;
 	margin: 0 auto;
@@ -145,8 +149,11 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 .how {
 	&__title {
 		margin: 105px 0 63px 0;
+		@media (max-width: $md2+px) {
+			margin: 80px 0px 40px 0px;
+		}
 		@media (max-width: $md3+px) {
-			margin: 40px 0 40px 0;
+			margin: 40px 0px 40px 0px;
 			font-size: 20px;
 		}
 	}
@@ -206,19 +213,21 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 .price {
 	@media (max-width: $md3+px) {
 		background-color: #F8FBFF;
-		padding: 40px 0px 60px 0px;
+		padding: 40px 0px 40px 0px;
 	}
 	&__title {
-		margin: 59px 0px 17px 17px;
+		margin: 59px 0px 17px 0px;
 		font-weight: 600;
 		font-size: 30px;
+		@media (max-width: $md2+px) {
+			margin: 40px 0px 17px 0px;
+		}
 		@media (max-width: $md3+px) {
 			font-size: 20px;
-			margin: 40px 0px 17px 17px;
+			margin: 20px 0px 17px 0px;
 		}
 	}
 	&__subtitle {
-		margin-left: 17px;
 		text-align: center;
 		@media (max-width: $md3+px) {
 			display: none;
@@ -288,6 +297,7 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 		font-weight: 600;
 		font-size: 24px;
 		@media (max-width: $md3+px) {
+			font-weight: 500;
 			font-size: 18px;
 			margin: 0px 0px 24px 0px;
 		}
@@ -315,7 +325,8 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 	&__item-btn {}
 	&__all-prices {
 		display: none;
-		margin: 0 auto;
+		margin: 40px auto 0px auto;
+		background-color: #F8FBFF;
 		text-decoration: underline;
 		font-size: 16px;
 		font-weight: 500;
@@ -329,9 +340,9 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 
 .review {
 	padding: 110px 0px 0px 0px;
-	@media (max-width: $md2+px) {
-		padding: 50px 0px 0px 0px;
-	}
+		@media (max-width: $md1+px) {
+			padding: 60px 0px 0px 0px;
+		}
 	a {
 		color: #333;
 	}
@@ -349,16 +360,14 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 			flex-direction: column;
 		}
 	}
-	&__items {
-
-	}
+	&__items {}
 	&__item {
+		display: flex;
+		flex-direction: column;
 		flex-basis: 32.3%;
 		a {
 			color: #333;
 		}
-	}
-	&__item {
 		@media (max-width: $md3+px) {
 			display: none;
 		}
@@ -387,6 +396,8 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 	&__item-text {
 		margin-bottom: 25px;
 		line-height: 1.31;
+		flex: 1 1 auto;
+	
 	}
 	&__item-more {
 		text-decoration: underline;
@@ -422,7 +433,7 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 		}
 	}
 	&__subtitle {
-		margin: 14px 0px 37px 0px;
+		margin: 11px 0px 37px 0px;
 		line-height: 1.3;
 		@media (max-width: $md3+px) {
 			font-size: 15px;
@@ -451,6 +462,7 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 	}
 	&__form {
 		display: flex;
+		justify-content: space-between;
 		@media (max-width: $md2+px) {
 			flex-direction: column;
 		}
@@ -466,8 +478,21 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 			flex-direction: column;
 		}
 	}
+	&__recall {
+		margin: 12px 0px 50px 0px;
+		text-align: right;
+		@media (max-width: $md2+px) {
+			margin: 40px 0px 0px 0px;
+			display: inline-block;
+			text-align: center;
+		}
+		@media (max-width: $md3+px) {
+			margin: 12px 0px 0px 0px;
+			align-items: flex-start;
+		}
+	}
 	&__call {
-		display: inline-block;
+		display: inline;
 		position: relative;
 		width: 250px;
 		height: 50px;
@@ -478,11 +503,18 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 		color: #f2f2f2;
 		background-color: #FF352B;
 		cursor: pointer;
+
+		@media (max-width: $md2+px) {
+			//--------------------------------------------------------
+		}
 		@media (max-width: $md3+px) {
+			text-align: center;
 			display: block;
 			margin: 0 auto;
 			width: 100%;
 		}
+
+
 	}
 	&__call::before {
 		content: '';
@@ -502,18 +534,6 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 	&__call:hover {
 		background-color: #ff4f46;
 	}
-	&__recall {
-		margin: 12px 0px 0px 70px;
-		@media (max-width: $md2+px) {
-			display: inline-flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		@media (max-width: $md3+px) {
-			margin: 12px 0px 0px 0px;
-			align-items: flex-start;
-		}
-	}
 	&__checkbox {
 		position: absolute; //скрываем checkbox
 		z-index: -1;		//
@@ -523,11 +543,11 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 		display: inline-flex;
 		align-items: center;
 		user-select: none; //запретить выделять элемент
-		margin-top: 40px;
+		margin-top: 37px;
 		font-size: 12px;
 		cursor: pointer;
 		@media (max-width: $md2+px) {
-			margin-top: 20px;
+			display: block;
 		}
 
 	}
@@ -538,7 +558,10 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 		height: 15px;
 		border: 1px solid #333;
 		border-radius: 3px;
-		margin-right: 10px;
+		margin-right: 16px;
+		@media (max-width: $md2+px) {
+			vertical-align: text-top;
+		}
 	}
 	&__checkbox:checked + label::before {
 		background-image: url('../img/content/check-mark-black-outline.svg');
@@ -558,6 +581,7 @@ input:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 	&__img {
 		max-width: 100%;
 		height: 666px;
+		//map picture:
 		background: url('../img/content/map.jpg') center / cover no-repeat;
 	}
 	&__adress {
